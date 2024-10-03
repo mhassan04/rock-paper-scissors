@@ -1,0 +1,70 @@
+<script>
+
+    function getComputerChoice(){
+       let decision = Math.random();
+        if(decision > 0 && decision <= 0.33 ){
+            return "rock";
+        }
+        else if(decision >= 0.34 && decision <= 0.66 ){
+            return "paper";
+        }
+        else if(decision >= 0.67 && decision <= 1 ){
+            return "scissors";
+        }
+    }
+
+    function getHumanChoice(){
+        let user = prompt("Rock? Paper? Or Scissors?: ");
+        if (user === "rock" || user === "paper" || user === "scissors" || 
+        user === "Rock" || user === "Paper" || user === "Scissors") {
+            return user.toLowerCase();
+        }
+        else{
+            console.log("Not an Option! Try again.");
+            return getHumanChoice();
+        }
+    }
+
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice){
+        
+        computerChoice = computerChoice.toLowerCase();
+        if(computerChoice ==  humanChoice){
+           console.log("This is a tie!");
+        }
+        else if(computerChoice == "rock" && humanChoice == "paper"){
+            console.log("Paper beats Rock. You win!");
+            humanScore++;
+        }
+        else if(computerChoice == "rock" && humanChoice == "scissors"){
+            console.log("Rock beats Scissors. You lose!");
+            computerScore++;
+        }
+        else if(computerChoice == "paper" && humanChoice == "rock"){
+            console.log("Paper beats Rock. You lose!");
+            computerScore++;
+        }
+        else if(computerChoice == "paper" && humanChoice == "scissors"){
+            console.log("Scissors beats Paper. You win!");
+            humanScore++;
+        }
+        else if(computerChoice == "scissors" && humanChoice == "rock"){
+            console.log("Rock beats Scissors. You win!");
+            humanScore++;
+        }
+        else if(computerChoice == "scissors" && humanChoice == "paper"){
+            console.log("Scissors beats Paper. You lose!");
+            computerScore++;
+        }
+    }
+    
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    console.log(`You chose: ${humanChoice}, Computer chose: ${computerChoice}`);
+    playRound(humanChoice, computerChoice);
+    console.log(humanScore);
+    console.log(computerScore);
+
+</script>
