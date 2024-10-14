@@ -1,26 +1,36 @@
-# Rock, Paper, Scissors Game
+# Rock Paper Scissors Game
 
-A simple JavaScript implementation of the classic "Rock, Paper, Scissors" game, where a human player competes against the computer over 5 rounds.
+A simple JavaScript implementation of the classic "Rock, Paper, Scissors" game, where a human player competes against the computer. The game now features a graphical user interface (UI) with buttons for player input and a score display.
 
 ## Features
 
-- Case-insensitive user input for "rock", "paper", or "scissors"
-- Error handling for invalid inputs, prompting the user to try again
-- Random computer choice generation
-- Score tracking for both the player and the computer
-- Final winner announcement after 5 rounds
+- **Button-based input**: Players click buttons to choose between "Rock", "Paper", or "Scissors".
+- **Random computer choice**: The computer randomly selects its choice for each round.
+- **Live score tracking**: The current scores for both the player and the computer are displayed after each round.
+- **Game result announcement**: The game announces the result of each round (win, lose, or tie).
+- **Winning condition**: The game continues until either the player or the computer reaches 5 points, and the winner is announced.
+- **Restart option**: After the game ends, a "Restart Game" button allows you to play again.
 
 ## How to Play
 
-1. When prompted, enter your choice: `rock`, `paper`, or `scissors`. You can type it in any case (e.g., `ROCK`, `rock`, `RoCk`).
-2. The computer will randomly choose its own move.
-3. After each round, the scores will be displayed.
-4. After 5 rounds, the final winner (or a tie) will be announced.
+1. Click one of the three buttons: `Rock`, `Paper`, or `Scissors`.
+2. The computer will randomly choose its move.
+3. The result of the round will be displayed along with the updated scores.
+4. The game continues until either you or the computer reaches 5 points. The final result will be displayed.
+5. After the game ends, click the "Restart Game" button to play again.
 
 ## How to Run
 
 1. Clone the repository or download the code.
 2. Open the `index.html` file in your browser to start playing the game.
 
+## Technologies Used
 
+- **HTML**: Structure and layout of the game.
+- **CSS**: Basic styling of the buttons and game elements.
+- **JavaScript**: Game logic, user interaction, score tracking, and DOM manipulation.
+
+## Live Demo
+
+You can play the game directly by visiting the [Live Demo on GitHub Pages](https://mhassan04.github.io/rock-paper-scissors/).
 
